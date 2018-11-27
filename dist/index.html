@@ -2,9 +2,37 @@
 <html>
   <head>
     <title>test board</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
+    <script src="../dist/js/pwdChecker.min.js"></script>
   </head>
   <body>
-    <input id="pwdChecker" type="text"/>
-    <script src="../dist/js/pwdChecker.min.js"></script>
+    <div class="container">
+    <div class="title">simple example</div>
+      <div class="example">
+        <div class="col-sm-5">
+          password: <input id="pwdChecker" type="password"/>
+        </div>
+        <div class="col-sm-7">
+          <div class="pregressbar"> bar </div>
+        </div>
+      </div>
+    </div>
   </body>
+
+  <script>
+    //lazy load
+    document.addEventListener("DOMContentLoaded", function(){
+      var pwdChecker = new PwdChecker()
+    });
+  </script>
+
+  <style>
+  .title {
+    font-size : 3em;
+  }
+  
+  .example {
+    margin: 1em
+  }
+  </style>
 </html>

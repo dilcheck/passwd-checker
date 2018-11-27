@@ -31,7 +31,6 @@ defaultSetting.reg.lowerChar = '(?=.*?[az])';
 defaultSetting.reg.specialCharator = '(?=.*?[#?!@$%^&*-])';
 defaultSetting.reg.length = '.{' + defaultSetting.length.minLength +
  ',' + defaultSetting.length.maxLength + '}';
-
 defaultSetting.reg.exceptWord = '/' +
   _.join(defaultSetting.except.word, '|') + '/';
 defaultSetting.reg.exceptSpecialChar = '/[' +
