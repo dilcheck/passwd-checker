@@ -1,5 +1,5 @@
 {
-  "name": "webpack-demo",
+  "name": "passwd-checker",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
@@ -14,11 +14,14 @@
     "@babel/core": "^7.1.6",
     "@babel/preset-env": "^7.1.6",
     "babel-cli": "^6.26.0",
+    "babel-eslint": "^10.0.1",
     "babel-loader": "^8.0.4",
     "eslint": "^5.9.0",
     "eslint-config-google": "^0.11.0",
     "eslint-loader": "^2.1.1",
+    "jquery": "^3.3.1",
     "lodash": "^4.17.11",
+    "uglifyjs-webpack-plugin": "^2.0.1",
     "webpack": "^4.26.1",
     "webpack-cli": "^3.1.2"
   }
