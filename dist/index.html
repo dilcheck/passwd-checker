@@ -2,7 +2,7 @@
 <html>
   <head>
     <title>test board</title>
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"i ntegrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
     <script src="../dist/js/pwdChecker.min.js"></script>
   </head>
   <body>
@@ -13,16 +13,37 @@
           password: <input id="pwdChecker" type="password"/>
         </div>
         <div class="col-sm-7">
-          <div class="pregressbar"> bar </div>
+          <button id="register"> register </button>
         </div>
       </div>
     </div>
   </body>
 
   <script>
+    let pwdChecker;
     //lazy load
     document.addEventListener("DOMContentLoaded", function(){
-      var pwdChecker = new PwdChecker()
+      //full options
+      const setting = {
+        length: {
+          min : 10,
+          max : 20
+        },
+        rule: {
+          specialCharacter : true,
+          character : true,
+          number : true
+        },
+        except: {
+          specialCharacter : ['<', '>', '(', ')', '#', '\'', '/', '|'],
+          word : ['love', 'happy', 'qwer', 'asdf', 'zxcv', 'test', 'gpin', 'ipin']
+        }
+      }
+      pwdChecker = new $.PwdChecker();
+    });
+    
+    $("#register").click(() => {
+      console.log(pwdChecker.report)
     });
   </script>
 
